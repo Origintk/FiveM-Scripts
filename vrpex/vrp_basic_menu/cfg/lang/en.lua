@@ -62,12 +62,6 @@ local lang = {
 		perm = "police.drag",
 		desc = "Drags nearby cuffed player.",
 	},
-	emergenc_heal = {
-		first = "Take",
-	},
-	emergenc_medkit = {
-		first = "Take",
-	},
 	fine = {
 		button = "Fine",
 		perm = "police.bmfine",
@@ -207,9 +201,6 @@ local lang = {
         perm = "player.menu",
         desc = "Player menu.",
     },
-	police_weapons = {
-		first = "Equip",
-	},
 	service = {
 		button = "Service",
 		perm = "mission.service",
