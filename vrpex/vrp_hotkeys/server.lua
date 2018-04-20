@@ -33,7 +33,6 @@ lang = Lang.lang[lcfg.lang]
 -- USE FOR NECESSARY SERVER FUNCTIONS
 
 function vRPhk.toggleHandcuff()
-  Citizen.CreateThread(function()
     local user_id = vRP.getUserId(source)
 	local player = vRP.getUserSource(user_id)
     if vRP.hasPermission(user_id,"hotkey.handcuff") then
@@ -43,9 +42,9 @@ function vRPhk.toggleHandcuff()
         vRP.closeMenu(nplayer)
       else
         vRPclient.notify(player,lang.common.no_player_near())
-      end
+     end
     end
-  end)
+ -- end)
 end
 
 function vRPhk.docsOnline()
