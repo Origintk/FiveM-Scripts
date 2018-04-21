@@ -37,7 +37,7 @@ police_weapons["Equip"] = {function(player,choice)
 	  ["WEAPON_STUNGUN"] = {ammo=500}  
 	}, true)
 	BMclient.setArmour(player,1000,true)
-	vRPclient.notify(player,"Voce  pegou ~g~ seus equipamentos Policiais")
+	vRPclient.notify(player,"You received ~ g ~ received medical equipment")
 end}
 
 emergency_medkit = {}
@@ -46,9 +46,9 @@ emergency_medkit["Take"] = {function(player,choice)
      if  vRP.tryPayment(user_id,100,false)then	
      vRP.giveInventoryItem(user_id,"medkit",1,true)
 	 vRP.giveInventoryItem(user_id,"pills",1,true)
-	 vRPclient.notify(player,"Voce foi ~g~ recebeu equipamentos medicos")
+	 vRPclient.notify(player,"You received ~ g ~ received medical equipment")
     else 
-      vRPclient.notify(player," ~r~ Voce nao tem dinheiro suficiente para o sistema do SUS de cura rapida")
+      vRPclient.notify(player," ~r~ You do not have enough money to pick up your equipment")
     end
 end}
 
@@ -58,8 +58,8 @@ emergency_heal["Heal"] = {function(player,choice)
     local user_id = vRP.getUserId(player)	
      if  vRP.tryPayment(user_id,100,false)then	
     vRPclient.setHealth(player,1000)
-	 vRPclient.notify(player,"Voce foi ~g~ curado por 100")
+	 vRPclient.notify(player,"You were ~ g ~ healed by 100")
     else 
-      vRPclient.notify(player," ~r~ Voce nao tem dinheiro suficiente para o sistema do SUS de cura rapida")
+      vRPclient.notify(player," ~r~ You do not have enough money for the quick-cure SUS system")
     end
 end}
