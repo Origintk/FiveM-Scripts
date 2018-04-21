@@ -40,14 +40,13 @@ police_weapons["Equip"] = {function(player,choice)
 	vRPclient.notify(player,"Voce  pegou ~g~ seus equipamentos Policiais")
 end}
 
---medkit storage
 emergency_medkit = {}
 emergency_medkit["Take"] = {function(player,choice)
-	local user_id = vRP.getUserId(player)
-        vRP.tryPayment(user_id,100,false)then		
-	vRP.giveInventoryItem(user_id,"medkit",25,true)
-	vRP.giveInventoryItem(user_id,"pills",25,true)
-     vRPclient.notify(player,"Voce foi ~g~ recebeu equipamentos medicos")
+    local user_id = vRP.getUserId(player)	
+     if  vRP.tryPayment(user_id,100,false)then	
+     vRP.giveInventoryItem(user_id,"medkit",1,true)
+	 vRP.giveInventoryItem(user_id,"pills",1,true)
+	 vRPclient.notify(player,"Voce foi ~g~ recebeu equipamentos medicos")
     else 
       vRPclient.notify(player," ~r~ Voce nao tem dinheiro suficiente para o sistema do SUS de cura rapida")
     end
